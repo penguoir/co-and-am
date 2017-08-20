@@ -8,7 +8,7 @@ deploy:
   provider: heroku
   api_key:
     secure: kCtGhfLq/Ww2LBEte4zHaPbJw9a6xUOEMWJzJBrpbttQjq6MvKXmkOThoVBISWLJqmquJXfpUklrekiA0pCf8E1M1R4Gwn5Ws7KzayoNZa9K5Puy4OIKyU5BWeTIgRe1Ir7cODelWk8U7iyBnvcxybhf9LEGPCE73ldMHqLtcfWTmR6gegkqmOvOlnDGkN7gLEyDuntWTj8Z+FbXusSdvL4KNizDmvCX/twCQoNvGzzli31mrAV8hVHG8Yn7/zLgQ+1dFWzfneGnKvJf2rFQ8sT023N/SK1S1Msd2NTVjWO5KlooJ+tX7XPhiAzhQqA4T0dS9ZgPt6U0G3m+iWD1Tu6QD2H0yWcmJSh1Hagl2v1dnSGA5l/jZl+trUNwAxHSrojZixq6t9jKHCUebYR3ICSQEBjEQYLImcGytVoAp0JwOPhebAsXoojizNU4vyAMa/dIVZSoIQgATErtrn/j9GHU5RdzMy+9/E+lltJ1jqNRf1lHSc8lNkPN4yi4E8wfUftEnFMe+aemG3dAa7b5DokGohFybV2vORxQjDb78Yv1ZrYP9/fQc0rR02Se2eDdNxsqLBQDouy5DuLjR3hg/6OZiMGwxJuCyTAtWQABb3l0G3PAwV1KnEth5mhM+F/EmLFCe90HrDmYBHxHIG6/u7TYDuW2bSXdNUrQRIJNUFc=
-  app: co-and-am
+  app: communistsandamericans
   on:
     repo: penguoir/co-and-am
     branch: prod
