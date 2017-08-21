@@ -1,4 +1,13 @@
 extends layout.pug
 
 block content
-  h1 Communists and Americans
+  .big-container.is-flex
+    h1 Communists #[span.red-text and] Americans
+    h2 The #[span.red-text best] game for 6 #[span.red-text liars].
+    .buttons
+      a.btn(href="/g") Create a game
+      a.btn(href="/j") Join a game
+
+append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js")
+  script(src="/js/fittext.js")
