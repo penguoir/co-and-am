@@ -1,12 +1,10 @@
 var express = require('express')
+var game = require('../models/game')
 var router = express.Router()
-
-router.use('/g', require('./game'))
-router.use('/j', require('./join'))
 
 router.get('/', function(req, res) {
   res.status(200)
-  res.render('index')
+  res.render('join')
 })
 
-module.exports = router
+module.exports = router;

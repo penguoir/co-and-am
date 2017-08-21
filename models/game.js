@@ -68,4 +68,12 @@ Game.prototype.remove = function(id) {
   })
 }
 
+Game.prototype.isValid = function(id) {
+  return new Promise(function(resolve, reject) {
+    db.get(String(id))
+      .then(doc => resolve(true))
+      .catch(err => reject(false))
+  })
+}
+
 module.exports = new Game()
