@@ -1,10 +1,15 @@
 extends layout
 
 block content
-  .big-container.is-flex
-    h1 Join a game
-    input#gid(type="text" placeholder="i.e. 123456")
-    a.btn(href="") Join
+  .block
+    h1.block__title Join a game
+
+    form.form
+      .form__group--input
+        input#gid(type="number" placeholder="i.e. 123456")
+
+    .block__action
+      a.button(href="") Join
 
 append scripts
   script(src="/js/join.js")

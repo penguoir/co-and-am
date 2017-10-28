@@ -3,37 +3,28 @@ var db = new pouchdb('caa')
 
 var Game = function () {}
 
-Game.prototype.create = function() {
+Game.prototype.create = function(numPlayers = 6) {
   return new Promise(function(resolve, reject) {
     var id = Math.floor( Math.random() * 900000 ) + 100000
+    var roles = [
+      {top: 'communist',bottom: 'bomber'},
+      {top: 'communist',bottom: 'team only'},
+      {top: 'communist',bottom: 'spy'},
+      {top: 'american', bottom: 'president'},
+      {top: 'american', bottom: 'team only'},
+      {top: 'american', bottom: 'spy'}
+    ]
+
+    if (numPlayers > 6) {
+      roles.push(
+        {top: 'communist',bottom: 'shy'},
+        {top: 'american', bottom: 'shy'}
+      )
+    }
+
     db.put({
       _id: String(id),
-      roles: [
-        {
-          top: 'communist',
-          bottom: 'bomber'
-        },
-        {
-          top: 'communist',
-          bottom: 'team only'
-        },
-        {
-          top: 'communist',
-          bottom: 'spy'
-        },
-        {
-          top: 'american',
-          bottom: 'president'
-        },
-        {
-          top: 'american',
-          bottom: 'team only'
-        },
-        {
-          top: 'american',
-          bottom: 'spy'
-        },
-      ]
+      roles: roles
     }).then( res => resolve(id))
       .catch(err => reject(err))
   })

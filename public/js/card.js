@@ -1,5 +1,5 @@
-$('h3').first().data('text', $('h3').first().text())
-$('h3').last().data('text', $('h3').last().text())
+$('h1').first().data('text', $('h1').first().text())
+$('h1').last().data('text', $('h1').last().text())
 
 function rnd(l = 10) {
   var text = "";
@@ -11,7 +11,7 @@ function rnd(l = 10) {
   return text;
 }
 
-$('h3').on('click', function (e) {
+$('h1').on('click', function (e) {
   if ( $(this).hasClass('hide') ) {
     $(this).text( $(this).data('text') )
     $(this).removeClass('hide')

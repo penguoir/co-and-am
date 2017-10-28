@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .block
+    h1.block__title Game Options
+    form.form(action='/g' method='GET')
+
+      .form__group--select
+        label(for='playerNum') Number of Players
+        select#playerNum(name="playerNum")
+          option(value="6") 6
+          option(value="8") 8
+      
+      input.button(type="submit", value="Create Game")

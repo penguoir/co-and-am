@@ -1,13 +1,58 @@
 extends layout.pug
 
 block content
-  .big-container.is-flex
-    h1 Communists #[span.red-text and] Americans
-    h2 The #[span.red-text best] game for 6 #[span.red-text liars].
-    .buttons
-      a.btn(href="/g") Create a game
-      a.btn(href="/j") Join a game
+  .block
+    h1.block__title       Communists and Americans
+    h2.block__subtitle    The best game for a group of liars
+    .block__action
+      a.button(href='/g') Create game
+      a.button(href='/j') Join game
+  
+  .block--content
+    h1 How to Play
+    h2 Set up
+    p.
+      Each player gets their phone out. One player
+      presses on 'Create game' and the other players
+      press 'Join game'. Players then write the game id
+      shown on the player's screen to join the same 
+      game. Next, each player taps on 'Get your card'
+      and looks at their card without showing others.
+      #[br]#[br]
+      A unique card will be generated for each player,
+      the top of the card has the team of the player
+      (either communist or american) and the bottom of the
+      card has the role of the player (president, bomber,
+      spy, team only or shy).
+      #[br]#[br]
+      Now, all players divide into two groups of the same
+      size, and each group will go into a seperate room. 
+    h2 Objective
+    p.
+      The communist's objective is to have the american
+      president and the communist bomber in the same room
+      after 3 switches. The american's objective is to
+      have the american president and the communist
+      bomber in different rooms after 3 switches.
+      #[br]#[br]
+      You must decieve, lie and talk your way in order
+      to identify your allies, and your enemies and be
+      the winning team.
 
-append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js")
-  script(src="/js/fittext.js")
+    h2 Gameplay
+    p.
+      After the group is seperated into 2 rooms, each
+      room must choose a team leader by democracy. This
+      must happen before any talking occurs.
+      #[br]#[br]
+      Next, for 5 minutes, each room will talk amongst
+      itself (no communicating between rooms). Players
+      are allowed to whisper or talk to everyone
+      and reveal their cards (or parts of their cards)
+      to other players.
+      #[br]#[br]
+      After 5 minutes are over, the team leader will 
+      choose who will move to the other room (it can be
+      themselves). This must happen without the knowledge 
+      of who the other room is sending. The player chosen 
+      will move to the other room and the process is repeated.

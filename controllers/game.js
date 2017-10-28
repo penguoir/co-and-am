@@ -4,9 +4,13 @@ var router = express.Router()
 
 router.get('/', function(req, res) {
   res.status(201)
-  game.create().then(id => {
-    res.redirect('g/' + id + '/')
-  })
+  if (req.query.playerNum) {
+    game.create(req.query.playerNum).then(id => {
+      res.redirect('g/' + id + '/')
+    })
+  } else {
+    res.render('create')
+  }
 })
 
 router.get('/:id/', function(req, res) {
