@@ -27,6 +27,7 @@
     "jasmine": "^2.7.0"
   },
   "dependencies": {
+    "cookie-parser": "^1.4.3",
     "express": "^4.15.4",
     "pouchdb": "^6.3.4",
     "pug": "^2.0.0-rc.3"

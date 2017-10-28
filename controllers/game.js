@@ -30,17 +30,28 @@ router.get('/:id/card', function(req, res) {
   game.isValid(String(id)).then(isValid => {
     if (isValid) {
       res.status(200)
-      game.getRole(id).then(role => {
+      if (req.cookies.card.id === id) {
         res.render('card', {
-          top: role.top,
-          bottom: role.bottom
+          top: req.cookies.card.top,
+          bottom: req.cookies.card.bottom
         })
-      }).catch(err => {
-        res.render('error', {
-          message: 'Sorry! This game is full.',
-          helper: 'Don\'t worry! You can make your own game! (This sometimes happens when someone accidentally refreshes their page. Solution coming soon!)'
+      } else {
+        game.getRole(id).then(role => {
+          res.cookie('card', {
+            id: id,
+            top: role.top,
+            bottom: role.bottom
+          }).render('card', {
+            top: role.top,
+            bottom: role.bottom
+          })
+        }).catch(err => {
+          res.render('error', {
+            message: 'Sorry! This game is full.',
+            helper: 'Don\'t worry! You can make your own game!'
+          })
         })
-      })
+      }
     }
   })
 })

@@ -1,9 +1,12 @@
 var express = require('express');
 
 var app = express()
+var cookieParser = require('cookie-parser')
 
 app.set('view engine', 'pug')
 app.set('views', './views')
+
+app.use(cookieParser())
 
 app.use(require('./controllers'))
 app.use(express.static(__dirname + '/public'))
