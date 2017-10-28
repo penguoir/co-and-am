@@ -30,7 +30,7 @@ router.get('/:id/card', function(req, res) {
   game.isValid(String(id)).then(isValid => {
     if (isValid) {
       res.status(200)
-      if (req.cookies.card.id === id) {
+      if (req.cookies.card && req.cookies.card.id === id) {
         res.render('card', {
           top: req.cookies.card.top,
           bottom: req.cookies.card.bottom

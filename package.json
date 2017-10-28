@@ -1,6 +1,6 @@
 {
   "name": "co-and-am",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Play communists and americans, online.",
   "main": "server.js",
   "scripts": {
