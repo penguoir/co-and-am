@@ -8,10 +8,8 @@ Game.prototype.create = function(numPlayers = 6) {
     var id = Math.floor( Math.random() * 900000 ) + 100000
     var roles = [
       {top: 'communist',bottom: 'bomber'},
-      {top: 'communist',bottom: 'team only'},
       {top: 'communist',bottom: 'spy'},
       {top: 'american', bottom: 'president'},
-      {top: 'american', bottom: 'team only'},
       {top: 'american', bottom: 'spy'}
     ]
 
@@ -19,6 +17,11 @@ Game.prototype.create = function(numPlayers = 6) {
       roles.push(
         {top: 'communist',bottom: 'shy'},
         {top: 'american', bottom: 'shy'}
+      )
+    } else {
+      roles.push(
+        {top: 'communist',bottom: 'team only'},
+        {top: 'american', bottom: 'team only'}       
       )
     }
 
